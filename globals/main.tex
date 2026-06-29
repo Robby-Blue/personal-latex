@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{debug/tables}
+\usepackage{debug/anki}
+\pagestyle{fancy}
+\lhead{Globals}
+\rhead{June 2026}
+\begin{document}
+
+\section{Globals}
+\subsection{Tables}
+\subsubsection{With a header}
+\begin{ztable}{cXc}{a & b & c}
+ d & \lipsum[2][1-4] & e \\
+ f & \lipsum[10][1-4] & g \\
+\end{ztable}
+
+\subsubsection{Without a header}
+\begin{ztableheadless}{cXc}
+ a & \lipsum[2][1-4] & b \\
+ c & \lipsum[10][1-4] & d \\
+\end{ztableheadless}
+\lipsum[1][1-2]
+\begin{ztableheadless}{cXX}
+ a & \lipsum[10][1-4] & \lipsum[11][1-4] \\
+\end{ztableheadless}
+
+\subsection{Anki}
+\ankinote{id}{question}{answer}
+\ankinote{id\_2}{question\_2}{answer\_2}
+
+\end{document}

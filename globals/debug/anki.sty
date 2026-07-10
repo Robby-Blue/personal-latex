@@ -1,3 +1,28 @@
-\newcommand{\ankinote}[3]{
- \noindent \texttt{[#1]} #2: #3 \newline
+\newif\ifshownotes
+\def\prefix{}
+\def\topic{}
+
+\newcommand{\showanki}{
+ \shownotestrue
+}
+
+\newcommand{\ankiprefix}[1]{
+ \def\prefix{#1}
+}
+
+\newcommand{\ankitopic}[1]{
+ \def\topic{#1}
+}
+
+\newcommand{\ankinote}[3]{%
+ \if\relax\detokenize\expandafter{\prefix}\relax
+  \errmessage{Set an Anki prefix}
+ \fi
+ \ifshownotes%
+  \noindent \pwriteankinote{\prefix:#1}{\topic{} #2}{#3} \newline
+ \fi
+}
+
+\newcommand{\pwriteankinote}[3]{%
+ \texttt{[#1]} #2: #3
 }

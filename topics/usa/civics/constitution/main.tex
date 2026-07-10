@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{/globals/texts}
+\usepackage{/globals/anki}
+\usepackage{/globals/tables}
+\ankiprefix{usconst}
+\ankitopic{US Constitution}
+
+\newcommand{\ankiart}[2]{
+ \ankinote{article\_from\_n\_#1}{Article #1}{#2}
+ \ankinote{article\_from\_expl\_#1}{Article #2}{Article #1}
+}
+\newcommand{\ankiamend}[2]{
+ \ankinote{amendment\_from\_n\_#1}{Amendment #1}{#2}
+ \ankinote{amendment\_from\_expl\_#1}{Amendment #2}{#1}
+}
+\begin{document}
+
+\section{The Constitution}
+The Constitution of the United States of America is the supreme law of the USA, which sets up the government, sets up the basic rights of the people, the government, the states, \etc It is above all other laws, courts, and precedents.
+
+\subsection{History}
+The current Constitution is the USA's second constitution, replacing the Articles of Confederation. \ankinote{count}{Count}{2}
+It was written in 1787, at the Constitutional Convention in Philadelphia.
+
+\subsection{Contents}
+The Constitution has 7 main articles.
+\begin{description}
+ \item[Article I] Article I sets up the Legislative; the Congress, made up of both the Senate and the House of Representatives. It describes who they are elected by, and which requirements there are for each. It gives gives the legislative specific powers and limits. \ankiart{1}{Sets up the legislative branch}
+ \item[Article II] Article II sets up the executive branch, the Office of the President of the United States of America. The president is given qualifications (natural born citizen, 35 years old, \etc), powers (Commander in Chief of the Army and Navy, make treaties, give pardons, appoint judges, ministers, \etc) and duties (reporting to the State of the Union, enforce the laws, \etc). \ankiart{2}{Sets up the president}
+ \item[Article III] Article III sets up the judiciary, gives the federal courts the right to interpret and apply laws, and to give out punishments and sentences. It describes the Supreme Court as the as the highest court. \ankiart{3}{Sets up the courts}
+ \item[Article IV] Article IV describes the relationships between the federal government and the states and between the states themselves. It allows for extraditions, the creation of new states with a republican government, allows for non-state territory, \etc. \ankiart{4}{Describes states}
+ \item[Article V] Article V allows for changes to the constitution, by allowing a $2/3$ majority of the states or of the house to call for an Amendment, and by allowing a $3/4$ majority to ratify Amendments. \ankiart{5}{Describes Amendments}
+ \item[Article VI] Article VI gives the federal government more power than the individual states, declaring that the constitution and any federal laws stand above any state laws. \ankiart{6}{Describes federal supremacy over states}
+ \item[Article VII] Article VII describes that $2/3$ of the states ratifying the constitution is enough to establish the constitution. \ankiart{7}{Describes the ratification}
+\end{description}
+
+\subsection{Amendments}
+The Constitution can be changed; Amendments can be made. This is described in Artivle V.
+
+The first ten Amendments, called the Bill of Rights, were all proposed on September 25, 1789 and completed on December 15, 1971. \ankinote{billofrights}{Bill of Rights}{First 10 Amendments}. It's been amended 27 times so far \ankinote{amendment\_count}{Amendment Count}{27}
+\begin{ztable}{cX}{Number & Contents}
+ 1 & Protects the freedom of religion, speech, free press, assembly, and petition. \\ \ankiamend{1}{freedom of religion, speech and free press}
+ 2 & The right to bear arms. \\ \ankiamend{2}{The right to bear arms}
+ 3 & Prevents soldiers from entering someones home without permission. It should be removed. \\ \ankiamend{3}{Prevents soldiers quartering}
+ 4 & Prohibits unreasonable searches and seizures without warrants. \\ \ankiamend{4}{Requires warrants for searches}
+ 5 & Requires due process, prohibits self-incrimination and double jeopardy. \\ \ankiamend{5}{due process, self-incrimination and double jeopardy}
+ 6 & Right to a speedy public trial by jury \\ \ankiamend{6}{Speedy public trial by jury}
+ 7 & Right to jury trial \\ \ankiamend{7}{Right to jury trial}
+ 8 & Prohibits excessive fines and bails, and cruel and unusual punishment. \\ \ankiamend{8}{Cruel and unusual punishment}
+ 9 & Protects rights implied but not mentioned \\ \ankiamend{9}{ Rights implied but not mentioned}
+ 10 & The federal government has only the rights mentioned in the Constitution. \\ \ankiamend{10}{Fed gov has just the rights mentioned in the Constitution}
+ 13 & Abolishes some forms of slavery, but keeps it legal as a form of punishment. \\ \ankiamend{13}{Abolition of some forms of slavery}
+ 14 & Defines citizenship, sets birthright citizenship \\ \ankiamend{14}{Birthright citizenship}
+ 15 & Prohibits denial of the right to vote based on race, skin color or previous condition of servitude \\ \ankiamend{15}{Right to vote based on race or skin color}
+ 18 & Prohibits the manufacturing or sale of alcohol within the United States \\ \ankiamend{18}{Prohibition}
+ 19 & Prohibits denial of the right to vote based on sex \\ \ankiamend{19}{Right to vote based on sex}
+ 21 & Repeals the 18th Amendment \\ \ankiamend{21}{Repeals the 18th Amendment}
+ 22 & Limits each president to two terms. \\ \ankiamend{22}{President term limit}
+ 26 & Lowers the voting age to 18 years. \\ \ankiamend{26}{Lowers the voting age to 18 years}
+\end{ztable}
+\end{document}

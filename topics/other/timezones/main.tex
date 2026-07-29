@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{/globals/tables}
+\usepackage{/globals/anki}
+\ankiprefix{timezones}
+\ankitopic{timezones}
+
+\newcommand{\ankitimezone}[4]{
+ \ankinote{timezone\_from\_abbreviation\_#1}{#1}{#2, #3, #4}
+ \ankinote{timezone\_from\_name\_#2}{#2}{#1, #3, #4}
+ \ankinote{timezone\_from\_offset\_#3}{#3}{#1, #2, #4}
+ \ankinote{timezone\_from\_place\_#4}{#4}{#1, #2, #3}
+}
+
+\begin{document}
+\section{Time zones}
+It's not always the same time everywhere on earth, because it's round; so time zones exist.
+
+Coordinated Universal Time (UTC)[a] is the primary time standard globally used to regulate clocks and time
+
+
+\subsection{The Greenwich Mean Time}
+To really express what time it is in a given time zone, it has to be compared to another standardised timezone with a standardised meridian. This is what GMT was used for.
+
+This is the Greenwich Mean Time (GMT), based on the Greenwich Meridian, as measured from the Royal Observatory in Greenwich, London.
+
+\subsection{UTC}
+Nowadays the primary standard used to regulate clocks and time is UTC (Coordinated Universal Time). Timezones can be offset from UTC by a specific amonut of hours \texttt{HH} and minutes \texttt{MM}, either ahead or behind. They're described as being \texttt{UTC+HH:MM} (or \texttt{UTC-HH:MM}) or also just being \texttt{+HH:MM} (or \texttt{-HH:MM}).
+
+\texttt{UTC+00:00} is GMT.
+ 
+\subsection{A list of some time zones}
+\begin{ztable}{lXlX}{Abbreviation & Full Name & Offset & Place}
+ PST & Pacific Standard Time & UTC-08:00 & California (Winter) \\
+ PDT & Pacific Daylight Time & UTC-07:00 & California (Summer) \\
+ EST & Eastern Standard Time & UTC-05:00 & New York City (Winter) \\
+ EDT & Eastern Daylight Time & UTC-04:00 & New York City (Summer) \\
+ GMT & Greenwich Mean Time & UTC+00:00 & London \\
+ CET & Central European Time & UTC+01:00 & Berlin (Winter) \\
+ CEST & Central European Summer Time & UTC+02:00 & Berlin (Summer) \\
+\end{ztable}
+
+\ankitimezone{PST}{Pacific Standard Time}{UTC-08:00}{California (Winter)}
+\ankitimezone{PDT}{Pacific Daylight Time}{UTC-07:00}{California (Summer)}
+\ankitimezone{EST}{Eastern Standard Time}{UTC-05:00}{New York City (Winter)}
+\ankitimezone{EDT}{Eastern Daylight Time}{UTC-04:00}{New York City (Summer)}
+\ankitimezone{GMT}{Greenwich Mean Time}{UTC+00:00}{London}
+\ankitimezone{CET}{Central European Time}{UTC+01:00}{Berlin (Winter)}
+\ankitimezone{CEST}{Central European Summer Time}{UTC+02:00}{Berlin (Summer)}
+
+\end{document}

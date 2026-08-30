@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage{/globals/texts}
+\begin{document}
+\newcommand{\textr}[1]{
+ \hfill \texttt{#1}
+}
+\newcommand{\cname}[1]{
+ #1...
+}
+\section{Binary Notifications} 
+Not only is it trivial to encode data about a notificiation in a binary format but it's also trivial to imagine a phones vibration as a bit of information, based on one of its properties (\eg a short vibration as a zero and a long vibration as a one); all in all it's rather trivial to encode data about a notification in its corrosponding vibration.
+
+I have done exactly this, by programming a simple Android app which listens to notifications, understands their content (based on app, and on its title), and vibrates in a specific pattern accordingly.
+
+\subsection{Values}
+While making sure that I know everything about all of my notifications as soon as I receive them does go against many of the values I strive for, mainly that of being less distracted by my phone (and other technology), I seem to have done it anyway.
+
+One can however also easily argue it will scratch the itch of wanting to pull out the phone to immediately know where a notification came from, which would usually followed by not putting the phone back down for a longer than necesarry.
+
+It is to be seen whether this will succeed, be useful, or be thought of as a stupid idea in 1, or 3, or 6 months time.
+
+\subsection{The Code}
+\begin{description}
+ \item[0] Maybe Important \textr{0}
+ \item[1] Important \textr{1}
+ \begin{description}
+  \item[0] Real Life
+  \begin{description}
+   \item[0] Family
+   \begin{description}
+    \item[0] Parents
+    \begin{description}
+     \item[0] \cname{M} \textr{10000}
+     \item[1] \cname{D} \textr{10001}
+    \end{description}
+    \item[1] \cname{T} \textr{1001}
+   \end{description}
+   \item[1] Friends
+   \begin{description}
+    \item[0] \cname{E} \textr{1010}
+    \item[1] \cname{L} \textr{1011}
+   \end{description}
+  \end{description}
+  \item[1] Online
+  \begin{description}
+   \item[0]~
+   \begin{description}
+    \item[0] \cname{A} \textr{1100}
+    \item[1] \cname{G} \textr{1101}
+   \end{description}
+   \item[1]~
+   \begin{description}
+    \item[0] \cname{R} \textr{1110}
+    \item[1] \cname{H} \textr{1111}
+   \end{description}
+  \end{description}
+ \end{description}
+\end{description}
+\emph{Maybe Important} may mean notifications whose importance can't entirely be determined (\eg claims to be rather important, but can't be found in the above list), or notifications from other non-social-media instant messaging apps (the SMS app, WhatsApp, or Signal).
+
+Other notifications should simply not vibrate.
+
+Any of these notifications or categories of notifications might be muted, for example; while at work, at school, or trying to study or focus, it's probably beneficial to mute online friends.
+
+\end{document}

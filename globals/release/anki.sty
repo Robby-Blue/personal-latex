@@ -1,0 +1,33 @@
+\def\ankiprefixvar{}
+\def\ankitopicvar{}
+
+\newwrite\ankifile
+\immediate\openout\ankifile=anki
+
+\newcommand{\ankiprefix}[1]{
+ \def\ankiprefixvar{#1}
+}
+
+\newcommand{\ankitopic}[1]{
+ \def\ankitopicvar{#1}
+}
+
+\newcommand{\ankinote}[3]{%
+  \ifnum\currentgrouptype=6
+    \noalign{\pwriteankinote{#1}{#2}{#3}}%
+  \else
+    \pwriteankinote{#1}{#2}{#3}
+  \fi
+}
+
+\newcommand{\pwriteankinote}[3]{%
+ \write\ankifile{- New Card}
+ \write\ankifile{-- ID}
+ \write\ankifile{\ankiprefixvar:#1}
+ \write\ankifile{-- Topic}
+ \write\ankifile{\ankitopicvar}
+ \write\ankifile{-- Front}
+ \write\ankifile{#2}
+ \write\ankifile{-- Back}
+ \write\ankifile{#3}
+}

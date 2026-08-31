@@ -1,0 +1,7 @@
+def main() {
+  document(
+      titlepage=titlepage(title="The USA")
+    ) {
+    use_doc(path="civics")
+  }
+}

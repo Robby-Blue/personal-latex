@@ -1,0 +1,24 @@
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+\newenvironment{ztableheadless}[1]{
+ \center
+ \tabularx{\linewidth}{#1}
+  \toprule
+}{
+  \bottomrule
+ \endtabularx
+ \endcenter
+}
+
+\newenvironment{ztable}[2]{
+ \center
+ \tabularx{\linewidth}{#1}
+  \toprule
+  #2 \\
+  \midrule
+}{
+  \bottomrule
+ \endtabularx
+ \endcenter
+}

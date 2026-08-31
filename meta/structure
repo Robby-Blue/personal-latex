@@ -1,0 +1,8 @@
+def main() {
+  document(
+      titlepage=titlepage(title="Zoe's Nonsense")
+    ) {
+    use_doc(path="topics/usa")
+    use_doc(path="topics/other")
+  }
+}

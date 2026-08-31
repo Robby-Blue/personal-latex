@@ -1,0 +1,9 @@
+def main() {
+  document(
+      titlepage=titlepage(title="Other Stuff")
+    ) {
+    use_sec("xkcd")
+    use_sec("timezones")
+    use_sec("binary_notifications")
+  }
+}
